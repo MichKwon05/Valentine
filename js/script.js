@@ -168,7 +168,7 @@ document.addEventListener('keydown', (event) => {
       Swal.fire({
         title: '¡Felicidades!',
         text: 'Has ganado 🎉',
-        imageUrl: '../assets/lisa_beso.jpg', 
+        imageUrl: '../assets/image.png', 
         imageWidth: 200,
         imageHeight: 200,
         showCancelButton: true, 
