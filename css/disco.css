@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.left-half {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  left: 25%;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.card img {
+  width: 105%;
+}
+
+.outer {
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -25%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner img {
+  width: 100%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.audio-player {
+  margin-top: 20px;
+}
+
+.right-half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  padding: 20px;
+  position: relative;
+}
+
+.note {
+  width: 60%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 30px;
+  color: #333;
+}
+
+.note-1 {
+  top: 10%; 
+  left: 10%; 
+  background-color: #ffc9de; 
+  transform: rotate(-5deg);
+  margin: 20px;
+}
+
+.note-2 {
+  top: 40%; 
+  left: 50%; 
+  background-color: #dbe7f3; 
+  transform: rotate(3deg); 
+  margin: 20px;
+}
+
+.note-3 {
+  top: 70%; 
+  left: 20%; 
+  background-color: #d5aaff; 
+  transform: rotate(-2deg); 
+}
+
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+.progress {
+  width: 71.6px;
+  height: 71.6px;
+  background: linear-gradient(#edbad1 0 0) bottom/100% 0% no-repeat #dbdcef;
+  -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left, 
+         radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right, 
+         linear-gradient(to bottom left, #000 42%,#0000 43%) bottom left , 
+         linear-gradient(to bottom right,#000 42%,#0000 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  animation: progress-ofy9at 2s infinite linear;
+}
+
+@keyframes progress-ofy9at {
+  90%, 100% {
+     background-size: 100% 100%;
+  }
+}

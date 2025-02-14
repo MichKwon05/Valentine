@@ -1,60 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #ffe4e1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+.progress {
+  width: 100.8px;
+  height: 16.8px;
+  border-radius: 16.8px;
+  background: repeating-linear-gradient(135deg, #c5a3ff 0 8.4px, rgba(206, 173, 232, 0.75) 0 16.8px) left/0% 100% no-repeat,
+              repeating-linear-gradient(135deg, rgba(243, 71, 255, 0.2) 0 8.4px, rgba(71, 75, 255, 0.1) 0 16.8px) left/100% 100%;
+  animation: progress-p43u5e 2s infinite;
+}
+
+@keyframes progress-p43u5e {
+  100% {
+    background-size: 100% 100%;
+  }
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  flex-direction: column;
 }
 
-.titulo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 28px;
-    color: #8cc6e9;
+.maze {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
 }
 
-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    margin: 10px 0;
+.maze div {
+  width: 30px;
+  height: 30px;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
 
-.buttons {
-    margin-top: 10px;
+.maze div.wall {
+  background-color: #343a40;
 }
 
-button {
-    font-size: 18px;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.maze div.path {
+  background-color: #d5aaff;
 }
 
-#no {
-    background-color: gray;
-    color: white;
-    /*cursor: not-allowed;*/
+.maze div.star {
+  font-size: 24px;
+  color: gold;
 }
 
-#si {
-    background-color: #8cc6e9;
-    color: white;
-}
-
-#si:hover {
-    background-color: #007bff;
+.maze div.goal {
+  background-color: #ffc107; /* Color de la meta */
+  font-size: 24px;
+  color: white;
 }

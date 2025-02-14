@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta ❤️</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Solitreo' rel='stylesheet'>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <div class="container">
-      <h1 class="titulo">¿Quieres ser mi San Valentín?</h1>
-      <img src="./assets/cat_love.webp" alt="San Valentín">
-      <div class="buttons">
-          <button id="no">No</button>
-          <button id="si">Sí</button>
-      </div>
+  <div id="loading" class="loading-screen">
+    <div class="progress"></div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+  <div id="laberinto" class="container d-none">
+    <div class="maze">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
